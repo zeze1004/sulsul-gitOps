@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sulsul-deployment
+  # namespace는 커맨드 라인에 전달하기
+  # namespace: backend
+  labels:
+    app: sulsul-api
+spec:
+  selector:
+    matchLabels:
+      app: sulsul-api
+  template:
+    metadata:
+      labels:
+        app: sulsul-api
+    spec:
+    containers:
+    - name: sulsul
+      image: zeze1004/sulsul:latest
+      ports:
+      - containerPort: 8080       
+
+
