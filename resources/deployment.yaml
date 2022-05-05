@@ -19,6 +19,8 @@ spec:
     - name: sulsul
       image: zeze1004/sulsul:latest
       ports:
-      - containerPort: 8080       
+      - containerPort: 8080
+      imagePullSecret:
+        - name: dockerconfig     
 
 
