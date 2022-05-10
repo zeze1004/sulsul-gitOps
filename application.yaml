@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: "git@github.com:depromeet/sulsul-BE"
     targetRevision: main
-    path: sulsul-chart
+    path: main
   destination:
     name: in-cluster
     namespace: argocd
