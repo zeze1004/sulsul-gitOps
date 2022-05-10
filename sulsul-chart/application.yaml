@@ -4,7 +4,7 @@ metadata:
   name: sulsul-be-repo
   namespace: argocd
 spec:
-  project: sulsul-cd
+  project: sulsul-be-repo
   source:
     repoURL: "git@github.com:depromeet/sulsul-BE"
     targetRevision: main
