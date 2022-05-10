@@ -10,8 +10,8 @@ spec:
     targetRevision: main
     path: .
   destination:
-    server: in-cluster
-    namespace: argocd
+    name: in-cluster
+    namespace: sulsul-be-api
   syncPolicy:
     automated:
       prune: true
