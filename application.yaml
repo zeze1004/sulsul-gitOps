@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sulsul-CD
+  name: sulsul-cd
   namespace: argocd
 spec:
-  project: sulsul-CD
+  project: sulsul-cd
   source:
     repoURL: "git@github.com:zeze1004/sulsul-gitOps.git"
     targetRevision: main
     path: sulsul-chart
   destination:
     name: in-cluster
-    namespace: default
+    namespace: argocd
   syncPolicy:
     automated:
       prune: true
