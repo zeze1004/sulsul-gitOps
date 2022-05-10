@@ -1,16 +1,37 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sulsul-be
+  name: sulsul-be-repo
   namespace: argocd
 spec:
-  project: default
+  project: sulsul-be-repo
   source:
     repoURL: "git@github.com:depromeet/sulsul-BE"
     targetRevision: main
     path: .
   destination:
-    server: https://kubernetes.default.svc
+    server: in-cluster
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
+---
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: sulsul-CD
+  namespace: argocd
+spec:
+  project: sulsul-CD
+  source:
+    repoURL: "git@github.com:zeze1004/sulsul-gitOps.git"
+    targetRevision: main
+    path: sulsul-chart
+  destination:
+    name: in-cluster
     namespace: default
   syncPolicy:
     automated:
