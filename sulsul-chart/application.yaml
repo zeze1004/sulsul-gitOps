@@ -11,7 +11,7 @@ spec:
     path: .
   destination:
     server: in-cluster
-    namespace: default
+    namespace: argocd
   syncPolicy:
     automated:
       prune: true
