@@ -1,27 +1,6 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sulsul-be-repo
-  namespace: argocd
-spec:
-  project: sulsul-be-repo
-  source:
-    repoURL: "git@github.com:depromeet/sulsul-BE"
-    targetRevision: main
-    path: .
-  destination:
-    server: in-cluster
-    namespace: default
-  syncPolicy:
-    automated:
-      prune: true
-      selfHeal: true
-    syncOptions:
-      - CreateNamespace=true
----
-apiVersion: argoproj.io/v1alpha1
-kind: Application
-metadata:
   name: sulsul-CD
   namespace: argocd
 spec:
