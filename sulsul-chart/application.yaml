@@ -1,17 +1,17 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sulsul
+  name: sulsul-be-repo
   namespace: argocd
 spec:
-  project: sulsul
+  project: sulsul-chart
   source:
     repoURL: "git@github.com:depromeet/sulsul-BE"
     targetRevision: main
     path: .
   destination:
-    name: https://kubernetes.default.svc
-    namespace: argocd
+    name: in-cluster
+    namespace: sulsul-be-api
   syncPolicy:
     automated:
       prune: true
