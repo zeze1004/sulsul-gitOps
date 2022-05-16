@@ -8,9 +8,9 @@ spec:
   source:
     repoURL: "git@github.com:zeze1004/sulsul-gitOps.git"
     targetRevision: main
-    path: .
+    path: ./sulsul-chart
   destination:
-    name: in-cluster
+    name: https://kubernetes.default.svc
     namespace: argocd
   syncPolicy:
     automated:
