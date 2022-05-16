@@ -1,10 +1,10 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: sulsul
+  name: sulsul-cd
   namespace: argocd
 spec:
-  project: sulsul
+  project: sulsul-cd
   source:
     repoURL: "git@github.com:zeze1004/sulsul-gitOps.git"
     targetRevision: main
