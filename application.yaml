@@ -8,7 +8,7 @@ spec:
   source:
     repoURL: "git@github.com:zeze1004/sulsul-gitOps.git"
     targetRevision: main
-    path: ./sulsul-chart
+    path: .
   destination:
     name: in-cluster
     namespace: argocd
