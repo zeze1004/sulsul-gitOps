@@ -11,7 +11,7 @@ spec:
     path: .
   destination:
     name: https://kubernetes.default.svc
-    namespace: sulsul-be-api
+    namespace: argocd
   syncPolicy:
     automated:
       prune: true
