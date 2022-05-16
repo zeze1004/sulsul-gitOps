@@ -10,7 +10,7 @@ spec:
     targetRevision: main
     path: ./sulsul-chart
   destination:
-    name: in-cluster
+    name: https://kubernetes.default.svc
     namespace: argocd
   syncPolicy:
     automated:
