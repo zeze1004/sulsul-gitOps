@@ -10,7 +10,7 @@ spec:
     targetRevision: main
     path: .
   destination:
-    name: https://kubernetes.default.svc
+    name: in-cluster
     namespace: sulsul-be-api
   syncPolicy:
     automated:
